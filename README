@@ -1,0 +1,32 @@
+Extensions
+
+_GUI Interface_
+An interactive game board with a screen for every action (game, history),
+supporting the restoration of turn moves and continuation of the game, editing
+player data, and the scoreboard. The implementation class is utilized for
+designing objects in the GUI to match the game's design, such as the round
+buttons. The interface is adjusted within the same window for viewing history,
+starting a new game, continuing a game, and playing online.
+
+_Online Game_
+An online game played against players running the program from another computer
+on the Internet, designed for 2 players and based on listening to changes in a
+database. The first player to enter starts with an odd ID, waiting for a second
+player with an even ID. The game utilizes Firebase Firestore. Only the start
+and end points of the player's last move and the current turn are entered into
+the database. After selecting a follower ID, each player will know which line
+in the database to listen to for new moves. Closing the window deletes the
+player from the database. Online games are not saved in log files, and cannot
+be restored, wins and losses are updated.
+
+_Playing Against a Computer Trying to Win_
+Computerized player with the goal of finishing the game. The computer selects a
+random tool or the one furthest from the vertex of the target, and brings that
+tool closer to the target triangle, utilizing an analytical geometry formula
+for calculating the distance between points.
+
+_Hints_
+Viewing hints for where a tool can go at the end of each turn, including skips.
+
+_Players Data_
+Support for many local players, allowing for the editing of their details.
